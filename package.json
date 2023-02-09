@@ -1,0 +1,36 @@
+{
+	"name": "@3dlyra/vector3",
+	"version": "1.0.0",
+	"description": "3d vector math library.",
+	"main": "vector3.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/3dlyra/vector3.git"
+	},
+	"files": [
+		"vector3.js",
+		"vector3.d.ts"
+	],
+	"keywords": [
+		"3dlyra",
+		"3d vector",
+		"math"
+	],
+	"author": "3DLyra",
+	"collaborators": [
+		"3DLyra <contact@3dlyra.com>"
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/3dlyra/vector3/issues",
+		"email" : "contact@3dlyra.com"
+	},
+	"homepage": "https://www.3dlyra.com",
+	"funding": {
+		"type": "buymeacoffee",
+		"url": "https://www.buymeacoffee.com/3dlyra"
+	}
+}
