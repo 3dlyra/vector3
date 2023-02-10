@@ -97,3 +97,12 @@ export function ceil( v3 ) {
 		Math.ceil( v3[ 2 ] )
 	] )
 }
+
+export function round( v3 ) {
+
+	return new Float32Array( [
+		Math.round( v3[ 0 ] ),
+		Math.round( v3[ 1 ] ),
+		Math.round( v3[ 2 ] )
+	] )
+}
