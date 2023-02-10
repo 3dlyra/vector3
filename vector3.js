@@ -38,3 +38,12 @@ export function div( a, b ) {
 		a[ 2 ] / b[ 2 ]
 	] )
 }
+
+export function min( a, b ) {
+
+	return new Float32Array( [
+		Math.min( a[ 0 ], b[ 0 ] ),
+		Math.min( a[ 1 ], b[ 1 ] ),
+		Math.min( a[ 2 ], b[ 2 ] )
+	] )
+}
