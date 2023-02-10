@@ -65,3 +65,8 @@ export function clamp( v3, min, max ) {
 		Math.max( min[ 2 ], Math.min( max[ 2 ], v3[ 2 ] ) )
 	] )
 }
+
+export function dot( a, b ) {
+
+	return a[ 0 ] * b[ 0 ] + a[ 1 ] * b[ 1 ] + a[ 2 ] * b[ 2 ]
+}

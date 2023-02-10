@@ -6,3 +6,4 @@ export function div( a: Float32Array, b: Float32Array ): Float32Array;
 export function min( a: Float32Array, b: Float32Array ): Float32Array;
 export function max( a: Float32Array, b: Float32Array ): Float32Array;
 export function clamp( v3: Float32Array, min: Float32Array, max: Float32Array ): Float32Array;
+export function dot( a: Float32Array, b: Float32Array ): number;
