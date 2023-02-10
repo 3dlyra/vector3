@@ -167,7 +167,7 @@ export function equals( a, b, accuracy ) {
 	)
 }
 
-export function angle( a, b ) {
+export function angleBetween( a, b ) {
 
 	const cosine = (
 		( a[ 0 ] * 1 / Math.sqrt( a[ 0 ] * a[ 0 ] + a[ 1 ] * a[ 1 ] + a[ 2 ] * a[ 2 ] ) ) * ( b[ 0 ] * 1 / Math.sqrt( b[ 0 ] * b[ 0 ] + b[ 1 ] * b[ 1 ] + b[ 2 ] * b[ 2 ] ) ) +
