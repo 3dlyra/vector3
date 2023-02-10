@@ -157,3 +157,12 @@ export function normalize( v3 ) {
 		v3[ 2 ] * 1 / Math.sqrt( v3[ 0 ] * v3[ 0 ] + v3[ 1 ] * v3[ 1 ] + v3[ 2 ] * v3[ 2 ] )
 	] )
 }
+
+export function equals( a, b, accuracy ) {
+
+	return (
+		Math.abs( a[ 0 ] - b[ 0 ] ) <= ( accuracy || 0 ) * Math.max( 1.0, Math.abs( a[ 0 ] ), Math.abs( b[ 0 ] ) ) &&
+		Math.abs( a[ 1 ] - b[ 1 ] ) <= ( accuracy || 0 ) * Math.max( 1.0, Math.abs( a[ 1 ] ), Math.abs( b[ 1 ] ) ) &&
+		Math.abs( a[ 2 ] - b[ 2 ] ) <= ( accuracy || 0 ) * Math.max( 1.0, Math.abs( a[ 2 ] ), Math.abs( b[ 2 ] ) )
+	)
+}
