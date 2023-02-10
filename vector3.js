@@ -47,3 +47,12 @@ export function min( a, b ) {
 		Math.min( a[ 2 ], b[ 2 ] )
 	] )
 }
+
+export function max( a, b ) {
+
+	return new Float32Array( [
+		Math.max( a[ 0 ], b[ 0 ] ),
+		Math.max( a[ 1 ], b[ 1 ] ),
+		Math.max( a[ 2 ], b[ 2 ] )
+	] )
+}
