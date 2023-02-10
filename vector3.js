@@ -124,3 +124,8 @@ export function distance( a, b ) {
 		( b[ 2 ] - a[ 2 ] ) * ( b[ 2 ] - a[ 2 ] )
 	)
 }
+
+export function length( v3 ) {
+
+	return Math.sqrt( v3[ 0 ] * v3[ 0 ] + v3[ 1 ] * v3[ 1 ] + v3[ 2 ] * v3[ 2 ] )
+}
