@@ -20,3 +20,12 @@ export function sub( a, b ) {
 		a[ 2 ] - b[ 2 ]
 	] )
 }
+
+export function mul( a, b ) {
+
+	return new Float32Array( [
+		a[ 0 ] * b[ 0 ],
+		a[ 1 ] * b[ 1 ],
+		a[ 2 ] * b[ 2 ]
+	] )
+}
