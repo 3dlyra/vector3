@@ -88,3 +88,12 @@ export function floor( v3 ) {
 		Math.floor( v3[ 2 ] )
 	] )
 }
+
+export function ceil( v3 ) {
+
+	return new Float32Array( [
+		Math.ceil( v3[ 0 ] ),
+		Math.ceil( v3[ 1 ] ),
+		Math.ceil( v3[ 2 ] )
+	] )
+}

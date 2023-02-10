@@ -9,3 +9,4 @@ export function clamp( v3: Float32Array, min: Float32Array, max: Float32Array ):
 export function dot( a: Float32Array, b: Float32Array ): number;
 export function cross( a: Float32Array, b: Float32Array ): Float32Array;
 export function floor( v3: Float32Array ): Float32Array;
+export function ceil( v3: Float32Array ): Float32Array;
