@@ -189,3 +189,12 @@ export function applyQuaternion( v3, quat ) {
 		( quat[ 3 ] * v3[ 2 ] + quat[ 0 ] * v3[ 1 ] - quat[ 1 ] * v3[ 0 ] ) * quat[ 3 ] + ( - quat[ 0 ] * v3[ 0 ] - quat[ 1 ] * v3[ 1 ] - quat[ 2 ] * v3[ 2 ] ) * - quat[ 2 ] + ( quat[ 3 ] * v3[ 0 ] + quat[ 1 ] * v3[ 2 ] - quat[ 2 ] * v3[ 1 ] ) * - quat[ 1 ] - ( quat[ 3 ] * v3[ 1 ] + quat[ 2 ] * v3[ 0 ] - quat[ 0 ] * v3[ 2 ] ) * - quat[ 0 ]
 	] )
 }
+
+export function fromLonLat( targetLon, targetLat, centerLon, centerLat, scale ) {
+
+	return new Float32Array( [
+		( 0 - ( ( scale || 1_000_000 ) * ( centerLon % 360 * ( Math.PI / 180 ) ) * 1 ) ) + ( scale || 1_000_000 ) * ( ( targetLon * ( Math.PI / 180 ) ) * 1 ),
+		( 0 - ( 0 - ( scale || 1_000_000 ) * ( Math.log( Math.tan( ( ( Math.PI / 2 ) + ( centerLat % 360 * ( Math.PI / 180 ) ) ) / 2 ) ) ) * - 1 ) ) - ( scale || 1_000_000 ) * ( ( Math.log( Math.tan( ( ( Math.PI / 2 ) + ( targetLat * ( Math.PI / 180 ) ) ) / 2 ) ) ) * - 1 ),
+		0,
+	] )
+}

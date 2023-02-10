@@ -52,4 +52,5 @@ negate( v3: vec3 ): vec3
 inverse( v3: vec3 ): vec3
 normalize( v3: vec3 ): vec3
 applyQuaternion( v3: vec3, quat: quaternion ): vec3
+fromLonLat( targetLon: number, targetLat: number, centerLon: number, centerLat: number, scale?: number ): vec3;
 ```
