@@ -79,3 +79,12 @@ export function cross( a, b ) {
 		a[ 0 ] * b[ 1 ] - a[ 1 ] * b[ 0 ]
 	] )
 }
+
+export function floor( v3 ) {
+
+	return new Float32Array( [
+		Math.floor( v3[ 0 ] ),
+		Math.floor( v3[ 1 ] ),
+		Math.floor( v3[ 2 ] )
+	] )
+}
