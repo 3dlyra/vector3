@@ -129,3 +129,12 @@ export function length( v3 ) {
 
 	return Math.sqrt( v3[ 0 ] * v3[ 0 ] + v3[ 1 ] * v3[ 1 ] + v3[ 2 ] * v3[ 2 ] )
 }
+
+export function negate( v3 ) {
+
+	return new Float32Array( [
+		- v3[ 0 ],
+		- v3[ 1 ],
+		- v3[ 2 ]
+	] )
+}
