@@ -56,3 +56,12 @@ export function max( a, b ) {
 		Math.max( a[ 2 ], b[ 2 ] )
 	] )
 }
+
+export function clamp( v3, min, max ) {
+
+	return new Float32Array( [
+		Math.max( min[ 0 ], Math.min( max[ 0 ], v3[ 0 ] ) ),
+		Math.max( min[ 1 ], Math.min( max[ 1 ], v3[ 1 ] ) ),
+		Math.max( min[ 2 ], Math.min( max[ 2 ], v3[ 2 ] ) )
+	] )
+}
