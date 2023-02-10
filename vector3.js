@@ -106,3 +106,12 @@ export function round( v3 ) {
 		Math.round( v3[ 2 ] )
 	] )
 }
+
+export function trunc( v3 ) {
+
+	return new Float32Array( [
+		Math.trunc( v3[ 0 ] ),
+		Math.trunc( v3[ 1 ] ),
+		Math.trunc( v3[ 2 ] )
+	] )
+}

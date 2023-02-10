@@ -11,3 +11,4 @@ export function cross( a: Float32Array, b: Float32Array ): Float32Array;
 export function floor( v3: Float32Array ): Float32Array;
 export function ceil( v3: Float32Array ): Float32Array;
 export function round( v3: Float32Array ): Float32Array;
+export function trunc( v3: Float32Array ): Float32Array;
