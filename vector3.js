@@ -177,3 +177,15 @@ export function angle( a, b ) {
 
 	return cosine > 1 ? 0 : Math.acos( cosine )
 }
+
+// adapted from threejs
+// quat = [ x, y, z, w ] (@3dlyra/quaternion)
+
+export function applyQuaternion( v3, quat ) {
+
+	return new Float32Array( [
+		( quat[ 3 ] * v3[ 0 ] + quat[ 1 ] * v3[ 2 ] - quat[ 2 ] * v3[ 1 ] ) * quat[ 3 ] + ( - quat[ 0 ] * v3[ 0 ] - quat[ 1 ] * v3[ 1 ] - quat[ 2 ] * v3[ 2 ] ) * - quat[ 0 ] + ( quat[ 3 ] * v3[ 1 ] + quat[ 2 ] * v3[ 0 ] - quat[ 0 ] * v3[ 2 ] ) * - quat[ 2 ] - ( quat[ 3 ] * v3[ 2 ] + quat[ 0 ] * v3[ 1 ] - quat[ 1 ] * v3[ 0 ] ) * - quat[ 1 ],
+		( quat[ 3 ] * v3[ 1 ] + quat[ 2 ] * v3[ 0 ] - quat[ 0 ] * v3[ 2 ] ) * quat[ 3 ] + ( - quat[ 0 ] * v3[ 0 ] - quat[ 1 ] * v3[ 1 ] - quat[ 2 ] * v3[ 2 ] ) * - quat[ 1 ] + ( quat[ 3 ] * v3[ 2 ] + quat[ 0 ] * v3[ 1 ] - quat[ 1 ] * v3[ 0 ] ) * - quat[ 0 ] - ( quat[ 3 ] * v3[ 0 ] + quat[ 1 ] * v3[ 2 ] - quat[ 2 ] * v3[ 1 ] ) * - quat[ 2 ],
+		( quat[ 3 ] * v3[ 2 ] + quat[ 0 ] * v3[ 1 ] - quat[ 1 ] * v3[ 0 ] ) * quat[ 3 ] + ( - quat[ 0 ] * v3[ 0 ] - quat[ 1 ] * v3[ 1 ] - quat[ 2 ] * v3[ 2 ] ) * - quat[ 2 ] + ( quat[ 3 ] * v3[ 0 ] + quat[ 1 ] * v3[ 2 ] - quat[ 2 ] * v3[ 1 ] ) * - quat[ 1 ] - ( quat[ 3 ] * v3[ 1 ] + quat[ 2 ] * v3[ 0 ] - quat[ 0 ] * v3[ 2 ] ) * - quat[ 0 ]
+	] )
+}
