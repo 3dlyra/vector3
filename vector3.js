@@ -138,3 +138,13 @@ export function negate( v3 ) {
 		- v3[ 2 ]
 	] )
 }
+
+
+export function inverse( v3 ) {
+
+	return new Float32Array( [
+		1 / v3[ 0 ],
+		1 / v3[ 1 ],
+		1 / v3[ 2 ]
+	] )
+}
