@@ -18,3 +18,4 @@ export function negate( v3: Float32Array ): Float32Array;
 export function inverse( v3: Float32Array ): Float32Array;
 export function normalize( v3: Float32Array ): Float32Array;
 export function equals( a: Float32Array, b: Float32Array, accuracy?: number ): boolean;
+export function angle( a: Float32Array, b: Float32Array ): number;

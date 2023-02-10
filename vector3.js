@@ -166,3 +166,14 @@ export function equals( a, b, accuracy ) {
 		Math.abs( a[ 2 ] - b[ 2 ] ) <= ( accuracy || 0 ) * Math.max( 1.0, Math.abs( a[ 2 ] ), Math.abs( b[ 2 ] ) )
 	)
 }
+
+export function angle( a, b ) {
+
+	const cosine = (
+		( a[ 0 ] * 1 / Math.sqrt( a[ 0 ] * a[ 0 ] + a[ 1 ] * a[ 1 ] + a[ 2 ] * a[ 2 ] ) ) * ( b[ 0 ] * 1 / Math.sqrt( b[ 0 ] * b[ 0 ] + b[ 1 ] * b[ 1 ] + b[ 2 ] * b[ 2 ] ) ) +
+		( a[ 1 ] * 1 / Math.sqrt( a[ 0 ] * a[ 0 ] + a[ 1 ] * a[ 1 ] + a[ 2 ] * a[ 2 ] ) ) * ( b[ 1 ] * 1 / Math.sqrt( b[ 0 ] * b[ 0 ] + b[ 1 ] * b[ 1 ] + b[ 2 ] * b[ 2 ] ) ) +
+		( a[ 2 ] * 1 / Math.sqrt( a[ 0 ] * a[ 0 ] + a[ 1 ] * a[ 1 ] + a[ 2 ] * a[ 2 ] ) ) * ( b[ 2 ] * 1 / Math.sqrt( b[ 0 ] * b[ 0 ] + b[ 1 ] * b[ 1 ] + b[ 2 ] * b[ 2 ] ) )
+	)
+
+	return cosine > 1 ? 0 : Math.acos( cosine )
+}
