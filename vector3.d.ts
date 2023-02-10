@@ -16,3 +16,4 @@ export function distance( a: Float32Array, b: Float32Array ): number;
 export function length( v3: Float32Array ): number;
 export function negate( v3: Float32Array ): Float32Array;
 export function inverse( v3: Float32Array ): Float32Array;
+export function normalize( v3: Float32Array ): Float32Array;
