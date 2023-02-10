@@ -27,7 +27,8 @@ import * as Vector3 from "@3dlyra/vector3"
 
 ### API
 ```TypeScript
-// type vec3 = Float32Array(3)
+// type vec3 = Float32Array( 3 )
+// type quaternion = Float32Array( 4 ) [or use @3dlyra/quaternion]
 
 create( x?: number, y?: number, z?: number ): vec3
 equals( a: vec3, b: vec3, accuracy?: number ): boolean
@@ -50,4 +51,5 @@ angle( a: vec3, b: vec3 ): number
 negate( v3: vec3 ): vec3
 inverse( v3: vec3 ): vec3
 normalize( v3: vec3 ): vec3
+applyQuaternion( v3: vec3, quat: quaternion ): vec3
 ```
