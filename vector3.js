@@ -115,3 +115,12 @@ export function trunc( v3 ) {
 		Math.trunc( v3[ 2 ] )
 	] )
 }
+
+export function distance( a, b ) {
+
+	return Math.sqrt(
+		( b[ 0 ] - a[ 0 ] ) * ( b[ 0 ] - a[ 0 ] ) +
+		( b[ 1 ] - a[ 1 ] ) * ( b[ 1 ] - a[ 1 ] ) +
+		( b[ 2 ] - a[ 2 ] ) * ( b[ 2 ] - a[ 2 ] )
+	)
+}
