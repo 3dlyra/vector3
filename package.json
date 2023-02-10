@@ -1,6 +1,6 @@
 {
 	"name": "@3dlyra/vector3",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "This library is the 3D vector part of the 3DLyra's math library.",
 	"main": "vector3.js",
 	"scripts": {
