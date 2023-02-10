@@ -21,7 +21,7 @@ import * as Vector3 from "@3dlyra/vector3"
   const a = Vector3.create( 1, 0, 0 )
   const b = Vector3.create( 0, 1, 0 )
 
-  console.log( Vector3.angle( a, b ) ) // 1.5707963267948966 (=== Math.PI / 2)
+  console.log( Vector3.angleBetween( a, b ) ) // 1.5707963267948966 (=== Math.PI / 2)
 }
 ```
 
@@ -47,7 +47,7 @@ round( v3: vec3 ): vec3
 trunc( v3: vec3 ): vec3
 length( v3: vec3 ): number
 distance( a: vec3, b: vec3 ): number
-angle( a: vec3, b: vec3 ): number
+angleBetween( a: vec3, b: vec3 ): number
 negate( v3: vec3 ): vec3
 inverse( v3: vec3 ): vec3
 normalize( v3: vec3 ): vec3
