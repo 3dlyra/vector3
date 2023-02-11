@@ -29,6 +29,7 @@ import * as Vector3 from "@3dlyra/vector3"
 ```TypeScript
 // type vec3 = Float32Array( 3 )
 // type quaternion = Float32Array( 4 ) [or use @3dlyra/quaternion]
+// type matrix4 = Float32Array( 16 ) [or use @3dlyra/matrix4]
 
 create( x?: number, y?: number, z?: number ): vec3
 equals( a: vec3, b: vec3, accuracy?: number ): boolean
@@ -52,5 +53,6 @@ negate( v3: vec3 ): vec3
 inverse( v3: vec3 ): vec3
 normalize( v3: vec3 ): vec3
 applyQuaternion( v3: vec3, quat: quaternion ): vec3
+applyMatrix4( v3: vec3, m4: matrix4 ): vec3
 fromLonLat( targetLon: number, targetLat: number, centerLon: number, centerLat: number, scale?: number ): vec3;
 ```
